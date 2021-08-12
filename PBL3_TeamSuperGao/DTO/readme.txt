@@ -1,0 +1,1 @@
+﻿Folder này dùng để chứa các file cs các lớp trung gian

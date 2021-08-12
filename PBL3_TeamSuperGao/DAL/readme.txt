@@ -1,0 +1,1 @@
+﻿tầng này dùng để truy xuất trực tiếp với entities

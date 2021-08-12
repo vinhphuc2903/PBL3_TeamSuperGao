@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11F58C7A-FA96-40C8-9B24-99D309212179}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PBL3_TeamSuperGao</RootNamespace>
+    <AssemblyName>PBL3_TeamSuperGao</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlusSK.1.0.23\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="LG4">
+      <HintPath>..\..\LG4\LG4\bin\Debug\LG4.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ban.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\BLL_MaHoaMatKhau.cs" />
+    <Compile Include="BLL\BLL_QLBan.cs" />
+    <Compile Include="BLL\BLL_QLChiTietHoaDon.cs" />
+    <Compile Include="BLL\BLL_QLCV.cs" />
+    <Compile Include="BLL\BLL_QLDanhMuc.cs" />
+    <Compile Include="BLL\BLL_QLHoaDon.cs" />
+    <Compile Include="BLL\BLL_QLM.cs" />
+    <Compile Include="BLL\BLL_QLMon.cs" />
+    <Compile Include="BLL\BLL_QLNhanVien.cs" />
+    <Compile Include="BLL\BLL_QLNV.cs" />
+    <Compile Include="BLL\BLL_QLTaiKhoan.cs" />
+    <Compile Include="BLL\BLL_ThongKe.cs" />
+    <Compile Include="ChiTietHoaDon.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChucVu.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DAL_QLBan.cs" />
+    <Compile Include="DAL\DAL_QLChiTietHoaDon.cs" />
+    <Compile Include="DAL\DAL_QLChucVu.cs" />
+    <Compile Include="DAL\DAL_QLDanhMuc.cs" />
+    <Compile Include="DAL\DAL_QLHoaDon.cs" />
+    <Compile Include="DAL\DAL_QLM.cs" />
+    <Compile Include="DAL\DAL_QLMon.cs" />
+    <Compile Include="DAL\DAL_QLNhanVien.cs" />
+    <Compile Include="DAL\DAL_QLNV.cs" />
+    <Compile Include="DAL\DAL_QLTaiKhoan.cs" />
+    <Compile Include="DAL\DAL_ThongKe.cs" />
+    <Compile Include="DanhMucMon.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\CBBItem.cs" />
+    <Compile Include="DTO\ChucVu.cs" />
+    <Compile Include="DTO\DanhMucMon.cs" />
+    <Compile Include="DTO\DoanhThuView.cs" />
+    <Compile Include="DTO\HoaDonView.cs" />
+    <Compile Include="DTO\Mon.cs" />
+    <Compile Include="DTO\MonSL.cs" />
+    <Compile Include="DTO\MonView.cs" />
+    <Compile Include="DTO\NhanVien.cs" />
+    <Compile Include="DTO\NhanVienView.cs" />
+    <Compile Include="GUI\Add_EditMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Add_EditMon.designer.cs">
+      <DependentUpon>Add_EditMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Add_EditNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Add_EditNV.designer.cs">
+      <DependentUpon>Add_EditNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CAFEVIEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CAFEVIEW.Designer.cs">
+      <DependentUpon>CAFEVIEW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormDangNhap.designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormDoiMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormDoiMK.designer.cs">
+      <DependentUpon>FormDoiMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Mon.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaiKhoan.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GUI\Add_EditMon.resx">
+      <DependentUpon>Add_EditMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Add_EditNV.resx">
+      <DependentUpon>Add_EditNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CAFEVIEW.resx">
+      <DependentUpon>CAFEVIEW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormDoiMK.resx">
+      <DependentUpon>FormDoiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BLL\readme.txt" />
+    <Content Include="DAL\readme.txt" />
+    <Content Include="DTO\readme.txt" />
+    <Content Include="Image\add_icon_32px.ico" />
+    <Content Include="Image\Back_.png" />
+    <Content Include="Image\Cafe_icon.ico" />
+    <Content Include="Image\Cancel_32px.ico" />
+    <Content Include="Image\edit_32px.ico" />
+    <Content Include="Image\Go-back_32px.ico" />
+    <Content Include="Image\ok_32px.ico" />
+    <Content Include="Image\pay_per_32px.ico" />
+    <Content Include="Image\reset_32px.ico" />
+    <Content Include="Image\search.png" />
+    <Content Include="Image\show_32px.ico" />
+    <None Include="Image\sort_32px.ico" />
+    <Content Include="Image\statistics_32px.ico" />
+    <Content Include="Image\systemusers_32px.ico" />
+    <Content Include="Image\trash_32px.ico" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
