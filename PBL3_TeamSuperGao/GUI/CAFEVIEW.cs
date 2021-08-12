@@ -298,7 +298,7 @@ namespace PBL3_TeamSuperGao.GUI
        
         private void XuatFile1(int IDHoaDon)
         {
-            System.IO.FileStream fl = new System.IO.FileStream(@"D:\102190183.txt", FileMode.Append, FileAccess.Write, FileShare.None);
+            System.IO.FileStream fl = new System.IO.FileStream(@"D:\HoaDon.txt", FileMode.Append, FileAccess.Write, FileShare.None);
             StreamWriter sw = new StreamWriter(fl);
             string u = "IDHoaDon    Ten Mon         So Luong       Ngay Gio Thanh Toan";
             string v = "";
