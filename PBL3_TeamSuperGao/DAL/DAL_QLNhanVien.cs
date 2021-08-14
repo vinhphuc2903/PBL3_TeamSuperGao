@@ -42,6 +42,14 @@ namespace PBL3_TeamSuperGao.DAL
             st.NhanViens.Add(t);
             st.SaveChanges();
         }
+        // cap nhat ID Tai Khoan
+        public void UpdateIDTaiKhoan(int IDTK,int IDNV)
+        {
+            DTDoAn st = new DTDoAn();
+            NhanVien UpdateID = st.NhanViens.Find(IDNV);
+            UpdateID.IDTaiKhoan = IDTK;
+            st.SaveChanges();
+        }
         //sua nhan vien
         public void UpdateNV(NhanVien t)
         {

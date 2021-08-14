@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c9c30ee20ac349238cac08330475a2d1" Name="Diagram1">
+      <Diagram DiagramId="f692a3fa0f68441c8c279f0321c0c00b" Name="Diagram1">
         <EntityTypeShape EntityType="MVH_02Model.Ban" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
         <EntityTypeShape EntityType="MVH_02Model.ChiTietHoaDon" Width="1.5" PointX="7.5" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="MVH_02Model.ChucVu" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
@@ -14,13 +14,13 @@
         <EntityTypeShape EntityType="MVH_02Model.NhanVien" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="MVH_02Model.sysdiagram" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MVH_02Model.TaiKhoan" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
-        <AssociationConnector Association="MVH_02Model.FK__HoaDon__IDBan__76619304" ManuallyRouted="false" />
-        <AssociationConnector Association="MVH_02Model.FK__ChiTietHo__IDHoa__7A3223E8" ManuallyRouted="false" />
-        <AssociationConnector Association="MVH_02Model.FK__ChiTietHo__IDMon__7B264821" ManuallyRouted="false" />
-        <AssociationConnector Association="MVH_02Model.FK__NhanVien__IDChuc__58D1301D" ManuallyRouted="false" />
-        <AssociationConnector Association="MVH_02Model.FK__Mon__IDDanhMucMo__51300E55" ManuallyRouted="false" />
-        <AssociationConnector Association="MVH_02Model.FK__HoaDon__IDNhanVi__7755B73D" ManuallyRouted="false" />
-        <AssociationConnector Association="MVH_02Model.FK__NhanVien__IDTaiK__59C55456" ManuallyRouted="false" />
+        <AssociationConnector Association="MVH_02Model.FK__HoaDon__IDBan__40C49C62" ManuallyRouted="false" />
+        <AssociationConnector Association="MVH_02Model.FK__ChiTietHo__IDHoa__44952D46" ManuallyRouted="false" />
+        <AssociationConnector Association="MVH_02Model.FK__ChiTietHo__IDMon__4589517F" ManuallyRouted="false" />
+        <AssociationConnector Association="MVH_02Model.FK__NhanVien__IDChuc__39237A9A" ManuallyRouted="false" />
+        <AssociationConnector Association="MVH_02Model.FK__Mon__IDDanhMucMo__308E3499" ManuallyRouted="false" />
+        <AssociationConnector Association="MVH_02Model.FK__HoaDon__IDNhanVi__41B8C09B" ManuallyRouted="false" />
+        <AssociationConnector Association="MVH_02Model.fk_IDTK" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

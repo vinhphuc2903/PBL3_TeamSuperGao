@@ -33,17 +33,25 @@ namespace PBL3_TeamSuperGao.DAL
         public List<Mon> GetAllMon()
         {
             DTDoAn st = new DTDoAn();
-            var t1 = st.Mons;
-            //var t1 = st.Mon;
-            return t1.ToList();
+            //var t1 = st.Mons;
+            List<Mon> mt = new List<Mon>();
+            foreach (Mon i in st.Mons)
+            {
+                if (i.TinhTrang.Contains("Dang Ban")) mt.Add(i);
+            }
+            return mt.ToList();
         }
         //liet ke mon an theo danh muc
         public List<Mon> GetMon_DM(int IDDanhMuc)
         {
             DTDoAn st = new DTDoAn();
             var t1 = st.Mons.Where(p => p.IDDanhMucMon == IDDanhMuc);
-            //var t1 = st.Mon;
-            return t1.ToList();
+            List<Mon> mt = new List<Mon>();
+            foreach (Mon i in t1)
+            {
+                if (i.TinhTrang.Contains("Dang Ban")) mt.Add(i);
+            }
+            return mt.ToList();
         }
         //liet ke mon an theo IDHoaDon
         public List<Mon> GetMon_IDHoaDon(int ID)

@@ -81,6 +81,8 @@ namespace PBL3_TeamSuperGao.GUI
             this.cboDanhMuc = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSearchMon = new System.Windows.Forms.Button();
+            this.lblTenNV = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabMon.SuspendLayout();
             this.tabThongKe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtvThongKe)).BeginInit();
@@ -122,7 +124,6 @@ namespace PBL3_TeamSuperGao.GUI
             this.tabThongKe.Size = new System.Drawing.Size(982, 509);
             this.tabThongKe.TabIndex = 0;
             this.tabThongKe.Text = "Thống Kê";
-            this.tabThongKe.Click += new System.EventHandler(this.tabThongKe_Click);
             // 
             // label6
             // 
@@ -208,6 +209,8 @@ namespace PBL3_TeamSuperGao.GUI
             // tabTaiKhoan
             // 
             this.tabTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabTaiKhoan.Controls.Add(this.comboBox1);
+            this.tabTaiKhoan.Controls.Add(this.lblTenNV);
             this.tabTaiKhoan.Controls.Add(this.btnResetTK);
             this.tabTaiKhoan.Controls.Add(this.lblCheck);
             this.tabTaiKhoan.Controls.Add(this.txtReFill);
@@ -227,13 +230,12 @@ namespace PBL3_TeamSuperGao.GUI
             this.tabTaiKhoan.Size = new System.Drawing.Size(982, 509);
             this.tabTaiKhoan.TabIndex = 1;
             this.tabTaiKhoan.Text = "Tài Khoản";
-            this.tabTaiKhoan.Click += new System.EventHandler(this.tabTaiKhoan_Click);
             // 
             // btnResetTK
             // 
             this.btnResetTK.Image = global::PBL3_TeamSuperGao.Properties.Resources.reset_32px;
             this.btnResetTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnResetTK.Location = new System.Drawing.Point(601, 216);
+            this.btnResetTK.Location = new System.Drawing.Point(601, 278);
             this.btnResetTK.Name = "btnResetTK";
             this.btnResetTK.Size = new System.Drawing.Size(166, 46);
             this.btnResetTK.TabIndex = 6;
@@ -245,7 +247,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             this.lblCheck.AutoSize = true;
             this.lblCheck.ForeColor = System.Drawing.Color.White;
-            this.lblCheck.Location = new System.Drawing.Point(763, 196);
+            this.lblCheck.Location = new System.Drawing.Point(763, 191);
             this.lblCheck.Name = "lblCheck";
             this.lblCheck.Size = new System.Drawing.Size(46, 17);
             this.lblCheck.TabIndex = 4;
@@ -261,7 +263,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             // txtMatKhauTK
             // 
-            this.txtMatKhauTK.Location = new System.Drawing.Point(766, 109);
+            this.txtMatKhauTK.Location = new System.Drawing.Point(766, 104);
             this.txtMatKhauTK.Name = "txtMatKhauTK";
             this.txtMatKhauTK.Size = new System.Drawing.Size(164, 22);
             this.txtMatKhauTK.TabIndex = 4;
@@ -305,7 +307,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             this.btnShowTK.Image = global::PBL3_TeamSuperGao.Properties.Resources.show_32px;
             this.btnShowTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShowTK.Location = new System.Drawing.Point(773, 215);
+            this.btnShowTK.Location = new System.Drawing.Point(773, 277);
             this.btnShowTK.Name = "btnShowTK";
             this.btnShowTK.Size = new System.Drawing.Size(157, 49);
             this.btnShowTK.TabIndex = 1;
@@ -317,7 +319,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             this.btnEditTK.Image = global::PBL3_TeamSuperGao.Properties.Resources.edit_32px;
             this.btnEditTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditTK.Location = new System.Drawing.Point(706, 268);
+            this.btnEditTK.Location = new System.Drawing.Point(706, 330);
             this.btnEditTK.Name = "btnEditTK";
             this.btnEditTK.Size = new System.Drawing.Size(110, 49);
             this.btnEditTK.TabIndex = 1;
@@ -330,7 +332,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             this.btnDelTK.Image = global::PBL3_TeamSuperGao.Properties.Resources.trash_32px;
             this.btnDelTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelTK.Location = new System.Drawing.Point(822, 268);
+            this.btnDelTK.Location = new System.Drawing.Point(822, 330);
             this.btnDelTK.Name = "btnDelTK";
             this.btnDelTK.Size = new System.Drawing.Size(108, 49);
             this.btnDelTK.TabIndex = 1;
@@ -343,7 +345,7 @@ namespace PBL3_TeamSuperGao.GUI
             // 
             this.btnAddTK.Image = global::PBL3_TeamSuperGao.Properties.Resources.add_icon_32px;
             this.btnAddTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddTK.Location = new System.Drawing.Point(601, 268);
+            this.btnAddTK.Location = new System.Drawing.Point(601, 330);
             this.btnAddTK.Name = "btnAddTK";
             this.btnAddTK.Size = new System.Drawing.Size(99, 49);
             this.btnAddTK.TabIndex = 1;
@@ -689,6 +691,23 @@ namespace PBL3_TeamSuperGao.GUI
             this.btnSearchMon.UseVisualStyleBackColor = true;
             this.btnSearchMon.Click += new System.EventHandler(this.btnSearchMon_Click);
             // 
+            // lblTenNV
+            // 
+            this.lblTenNV.AutoSize = true;
+            this.lblTenNV.Location = new System.Drawing.Point(598, 224);
+            this.lblTenNV.Name = "lblTenNV";
+            this.lblTenNV.Size = new System.Drawing.Size(103, 17);
+            this.lblTenNV.TabIndex = 7;
+            this.lblTenNV.Text = "Tên Nhân Viên";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(766, 224);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(164, 24);
+            this.comboBox1.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -768,6 +787,8 @@ namespace PBL3_TeamSuperGao.GUI
         private System.Windows.Forms.ComboBox cbbThongKe;
         private System.Windows.Forms.DateTimePicker dtmDes;
         private System.Windows.Forms.Button btnThongKe;
+        private System.Windows.Forms.Label lblTenNV;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

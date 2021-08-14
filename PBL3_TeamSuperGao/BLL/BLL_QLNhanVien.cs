@@ -38,6 +38,11 @@ namespace PBL3_TeamSuperGao.BLL
         {
             DAL.DAL_QLNhanVien.Instance.AddNhanVien(t);
         }
+        // Update ID TAI KHOAN
+        public void UpdateIDTK(int IDTK,int IDNV)
+        {
+            DAL.DAL_QLNhanVien.Instance.UpdateIDTaiKhoan(IDTK, IDNV);
+        }
         //sua nhan vien
         public void UpdateNV(NhanVien t)
         {

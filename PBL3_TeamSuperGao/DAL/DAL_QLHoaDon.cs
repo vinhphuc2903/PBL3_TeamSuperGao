@@ -73,7 +73,6 @@ namespace PBL3_TeamSuperGao.DAL
             {
                 if (j.IDHoaDon == IDHoaDon) j.NgayThanhToan = DateTime.Now;
             }
-            
             st.SaveChanges();
         }
         //tong tien theo ID ban

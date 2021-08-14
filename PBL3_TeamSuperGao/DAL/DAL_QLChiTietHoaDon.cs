@@ -54,7 +54,11 @@ namespace PBL3_TeamSuperGao.DAL
                     if (i.IDMon == j.IDMon) u.Add(DAL_QLMon.Instance.SwapMon(j, (int)i.SoLuong));
                 }
             }
+            //}
+            //catch
+            //{
 
+            //}
             return u;
         }
 

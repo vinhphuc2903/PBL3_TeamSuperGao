@@ -39,9 +39,10 @@ namespace PBL3_TeamSuperGao.GUI
             {
                 CAFEVIEW st = new CAFEVIEW();
                 st.SendForm_ += new CAFEVIEW.mydel(ShowForm);
-                this.Hide();
+                //this.Hide();
                 //lay ma nhan vien 
                 st.t = BLL_QLNhanVien.Instance.GetIDNVForIDTK(BLL_QLTaiKhoan.Instance.GetIDTK(txtUserName.Text, txtPassword.Text));
+                //st.ShowDialog();
                 this.Visible = false;
                 st.ShowDialog();
                 this.Close();

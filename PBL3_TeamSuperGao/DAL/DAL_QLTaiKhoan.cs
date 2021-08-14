@@ -28,11 +28,12 @@ namespace PBL3_TeamSuperGao.DAL
             var ListTaiKhoan = db.TaiKhoans;
             return ListTaiKhoan.ToList();
         }
-        public void Add(TaiKhoan tk)
+        public int Add(TaiKhoan tk)
         {
             DTDoAn db = new DTDoAn();
             db.TaiKhoans.Add(tk);
             db.SaveChanges();
+            return tk.IDTaiKhoan;
         }
         public void Delete(int ID)
         {

@@ -66,7 +66,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(177, 26);
             this.txtPassword.TabIndex = 1;
-            this.txtPassword.Text = "123";
+            this.txtPassword.Text = "1234";
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Keypress_enter);
             // 
             // label2
@@ -100,7 +100,7 @@ namespace PBL3_TeamSuperGao.GUI
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(177, 26);
             this.txtUserName.TabIndex = 0;
-            this.txtUserName.Text = "admin";
+            this.txtUserName.Text = "user";
             // 
             // btnDangNhap
             // 

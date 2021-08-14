@@ -48,12 +48,12 @@ namespace PBL3_TeamSuperGao.BLL
             }
             return ListTaiKhoan;
         }
-        public void BLL_AddTK(string Username,string Password)
+        public int BLL_AddTK(string Username,string Password)
         {
             TaiKhoan TempTaiKhoan = new TaiKhoan();
             TempTaiKhoan.UserName = Username;
             TempTaiKhoan.PassWord = MaHoaMatKhau(Password);
-            DAL_QLTaiKhoan.Instance.Add(TempTaiKhoan);
+            return DAL_QLTaiKhoan.Instance.Add(TempTaiKhoan);           
         }
         public void BLL_EditTK(string User, string Password)
         {

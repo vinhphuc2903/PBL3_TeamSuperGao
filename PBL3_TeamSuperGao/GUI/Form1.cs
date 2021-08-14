@@ -29,6 +29,7 @@ namespace PBL3_TeamSuperGao.GUI
             ShowMon();
             HandleThongKeHoaDon();
             Show_dtgvTK();
+            SetCBB1();
         }
 
         // Sett cbb to handle thong ke
@@ -101,6 +102,13 @@ namespace PBL3_TeamSuperGao.GUI
         // QUAN LY TAI KHOAN 
 
         // reset textbox
+        public void SetCBB1()
+        {
+            foreach(NhanVien i in BLL_QLNhanVien.Instance.GetAllNV())
+            {
+                comboBox1.Items.Add(new CBBItem { Value = i.IDNhanVien,Text = i.HoTen});
+            }
+        }
         public void reset()
         {
             txtReFill.Text = "";
@@ -141,6 +149,21 @@ namespace PBL3_TeamSuperGao.GUI
         {
             txtTenTK.Text = dtgvTaiKhoan.CurrentRow.Cells["UserName"].Value.ToString();
             txtMatKhauTK.Text = dtgvTaiKhoan.CurrentRow.Cells["PassWord"].Value.ToString();
+            int IDTK = Convert.ToInt32(dtgvTaiKhoan.CurrentRow.Cells["IDTaiKhoan"].Value);
+            int index = -1;
+            int IDNV = -1;
+            foreach(NhanVien i in BLL_QLNhanVien.Instance.GetAllNV())
+            {
+                if (i.IDTaiKhoan == IDTK) IDNV = i.IDNhanVien;
+            }
+            for(int i =0;i< BLL_QLNhanVien.Instance.GetAllNV().Count(); i++)
+            {
+                if(((CBBItem)comboBox1.Items[i]).Value == IDNV)
+                {
+                    index = i;
+                }
+            }
+            comboBox1.SelectedIndex = index;
         }
         // Kiem tra user ton tai chua
         public bool Check_isExistUser(string str)
@@ -161,7 +184,8 @@ namespace PBL3_TeamSuperGao.GUI
                 {
                     if (txtReFill.Text == txtMatKhauTK.Text && Check_isExistUser(txtTenTK.Text) == false)
                     {
-                        BLL_QLTaiKhoan.Instance.BLL_AddTK(txtTenTK.Text, txtMatKhauTK.Text);
+                        int IDTK = BLL_QLTaiKhoan.Instance.BLL_AddTK(txtTenTK.Text, txtMatKhauTK.Text);
+                        BLL_QLNhanVien.Instance.UpdateIDTK(IDTK,((CBBItem)comboBox1.Items[comboBox1.SelectedIndex]).Value);
                         MessageBox.Show("Them tai khoan thanh cong!");
                         reset();
                     }
@@ -181,7 +205,8 @@ namespace PBL3_TeamSuperGao.GUI
                     {
                         int ID = Convert.ToInt32(dtgvTaiKhoan.CurrentRow.Cells["IDTaiKhoan"].Value);
                         BLL_QLTaiKhoan.Instance.BLL_EditTK(txtTenTK.Text, txtMatKhauTK.Text);
-                        MessageBox.Show("Dat lai mat Khau thanh cong!");
+                        BLL_QLNhanVien.Instance.UpdateIDTK(ID, ((CBBItem)comboBox1.Items[comboBox1.SelectedIndex]).Value);
+                        MessageBox.Show("Chinh sua thanh cong!");
                         reset();
                     }
                     else if (Check_isExistUser(txtTenTK.Text) == false)
@@ -433,16 +458,6 @@ namespace PBL3_TeamSuperGao.GUI
         {
             Sent_form_();
             this.Close();
-        }
-
-        private void tabThongKe_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabTaiKhoan_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
